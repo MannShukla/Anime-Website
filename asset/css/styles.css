@@ -92,12 +92,11 @@ img{
 
 
 .header {
-   
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
+    z-index: 100;
 } 
 
 .nav {
@@ -117,6 +116,12 @@ img{
     color: var(--title-color);
     transition : all 0.3s var(--transition);
 }
+
+.scroll-header {
+    background-color: var(--black);
+    height: 50px;
+}
+
 
 .nav__link:hover,
 .active-link{
