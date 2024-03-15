@@ -29,8 +29,19 @@
 
 --transition: ease-in-out;
 
-
 }
+
+@media screen and (max-width:992px) {  
+    :root {
+        --big-font-size:11.75rem ;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: 0.938rem;
+        --small-font-size: 0.813;
+    }
+}
+
 
 *{
     margin: 0;
@@ -115,6 +126,11 @@ img{
 .nav__link {
     color: var(--title-color);
     transition : all 0.3s var(--transition);
+}
+
+.nav__close ,
+.nav__toggle {
+    display: none;
 }
 
 .scroll-header {
@@ -350,4 +366,148 @@ img{
 .footer__copyright {
     color: var(--title-color);
     text-align: center;
+}
+
+@media screen and(max-width:1400px) {
+    .container {
+        max-width: 1140px;
+    }
+    .home__container {
+        grid-template-columns: 5fr 7fr;
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(2 ,1fr);
+    }
+}
+
+@media screen and(max-width:1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .home__container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and(max-width:992px) {
+    .container{
+        max-width: 720px;
+    }
+
+    .home__container ,
+    .subscription__container{
+        grid-template-columns: 1fr;
+    }
+    .home__content{
+        order: 1;
+    }
+
+    .subscription{
+        height: 100%;
+    }
+
+    .subscription__description{
+        max-width: 100%;
+    }
+
+    .item__title,
+    .tweet__title{
+      font-size: var(--small-font-size);
+    }
+}
+
+@media screen and(max-width:768px){
+    .container {
+        max-width: 540px;
+    }
+
+    .nav__menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: var(--title-color);
+        width: 400px;
+        height: 100%;
+        padding: 4rem 1rem;
+        transition: all 0.3s var(--transition);
+    }
+
+    .show-menu{
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        row-gap: 0.75rem;
+    }
+
+    .nav__link,
+    .nav__close {
+        color: var(--black);
+    }
+
+    .nav__link {
+        padding: 0.75rem;
+
+    }
+
+    .active-link {
+        background-color: var(--first-color);
+        color: var(--title-color);
+        display: block;
+    }
+
+    .nav__close,
+    .nav__toggle {
+        display: block;
+        font-size: var(--h2-font-size);
+    }
+
+    .nav__toggle {
+        color: var(--title-color);
+    }
+
+    .nav__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and(max-width:576px) {
+    .section {
+        padding-block: 3rem;
+    }
+    .nav {
+        height: var(--header-height);
+    }
+
+    .nav__menu {
+        width: 100%;
+    }
+
+    .footer__container {
+        padding-block: 2rem;
+    }
+}
+
+@media screen and(max-width:450px) {
+    .brand__logo {
+        width: 55%;
+    }
+
+    .footer__anime-item img {
+        width: 85px;
+    }
+
+    .footer__instagram {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
