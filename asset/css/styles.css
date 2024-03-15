@@ -368,7 +368,7 @@ img{
     text-align: center;
 }
 
-@media screen and(max-width:1400px) {
+@media screen and (max-width:1400px) {
     .container {
         max-width: 1140px;
     }
@@ -381,7 +381,7 @@ img{
     }
 }
 
-@media screen and(max-width:1200px) {
+@media screen and (max-width:1200px) {
     .container {
         max-width: 960px;
     }
@@ -391,18 +391,23 @@ img{
     }
 }
 
-@media screen and(max-width:992px) {
+@media screen and (max-width:992px) {
     .container{
         max-width: 720px;
     }
 
+    .home__title{
+        font-size: 24px;
+    }
+
     .home__container ,
     .subscription__container{
-        grid-template-columns: 1fr;
+        grid-template-columns:  1fr;
     }
     .home__content{
         order: 1;
     }
+    
 
     .subscription{
         height: 100%;
@@ -418,7 +423,7 @@ img{
     }
 }
 
-@media screen and(max-width:768px){
+@media screen and (max-width:768px){
     .container {
         max-width: 540px;
     }
@@ -432,6 +437,10 @@ img{
         height: 100%;
         padding: 4rem 1rem;
         transition: all 0.3s var(--transition);
+    }
+
+    .home__container{
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .show-menu{
@@ -481,13 +490,18 @@ img{
 }
 
 
-@media screen and(max-width:576px) {
+@media screen and (max-width:576px) {
     .section {
         padding-block: 3rem;
     }
     .nav {
         height: var(--header-height);
     }
+
+    .home__container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 
     .nav__menu {
         width: 100%;
@@ -498,10 +512,15 @@ img{
     }
 }
 
-@media screen and(max-width:450px) {
+@media screen and (max-width:450px) {
     .brand__logo {
         width: 55%;
     }
+    .home__container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
 
     .footer__anime-item img {
         width: 85px;
