@@ -1,19 +1,20 @@
 
-const navMenu = document.getElementById('nav-menu'),
-navToggle = document.getElementById('nav-toggle'),
-navClose = document.getElementById('nav-close');
+const toggleButton = document.getElementById('nav__toggle');
+    const menu = document.getElementById('nav-menu');
 
-if (navToggle){
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.add('show-menu');
-  });
-}
+    // Add event listener to the toggle button
+    toggleButton.addEventListener('click', function() {
+        // Toggle the 'active' class on the menu
+        menu.classList.toggle('active');
+    });
 
-if (navClose){
-  navClose.addEventListener('click', () => {
-    navMenu.classList.remove('show-menu');
-  });
-}
+    // Optional: Close the menu when clicking the close button
+    const closeButton = document.getElementById('nav-close');
+    if (closeButton) {
+        closeButton.addEventListener('click', function() {
+            menu.classList.remove('active');
+        });
+    }
 
 
 function scrollHeader() {
