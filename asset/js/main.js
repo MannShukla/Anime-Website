@@ -5,14 +5,14 @@ const toggleButton = document.getElementById('nav__toggle');
     // Add event listener to the toggle button
     toggleButton.addEventListener('click', function() {
         // Toggle the 'active' class on the menu
-        menu.classList.toggle('active');
+        menu.classList.toggle('show-menu');
     });
 
     // Optional: Close the menu when clicking the close button
     const closeButton = document.getElementById('nav-close');
     if (closeButton) {
         closeButton.addEventListener('click', function() {
-            menu.classList.remove('active');
+            menu.classList.remove('show-menu');
         });
     }
 
